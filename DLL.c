@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "DLL.h"
 
-void MyDLLInit(uint16 ne, uint16 es) {
+void MyDLLInit(uint_16t key, uint16 es) {
 
 }
 
