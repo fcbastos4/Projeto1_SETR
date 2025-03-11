@@ -5,11 +5,11 @@ void MyDLLInit(uint16 ne, uint16 es) {
 
 }
 
-void MyDLLInsert() {
+int MyDLLInsert() {
 
 }
 
-void MyDLLRemove() {
+int MyDLLRemove() {
 
 }
 
