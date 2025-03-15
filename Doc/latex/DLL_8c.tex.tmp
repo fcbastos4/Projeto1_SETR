@@ -1,0 +1,49 @@
+\doxysection{Referência ao ficheiro DLL.\+c}
+\hypertarget{DLL_8c}{}\label{DLL_8c}\index{DLL.c@{DLL.c}}
+
+
+Implementação das funções relativas ao modulo DLL.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include "{}DLL.\+h"{}}\newline
+Diagrama de dependências de inclusão para DLL.\+c\+:
+% FIG 0
+\doxysubsubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{DLL_8c_adb3c17d9e722269a657e48e0ccb00293}\label{DLL_8c_adb3c17d9e722269a657e48e0ccb00293} 
+void {\bfseries My\+DLLInit} (int ne, int es)
+\item 
+\Hypertarget{DLL_8c_a47d94ef436332f113658a0bf5e6f0882}\label{DLL_8c_a47d94ef436332f113658a0bf5e6f0882} 
+int {\bfseries My\+DLLInsert} (uint\+\_\+16t key)
+\item 
+\Hypertarget{DLL_8c_af7587bc3869a491b1de0bfe0bf59a9c6}\label{DLL_8c_af7587bc3869a491b1de0bfe0bf59a9c6} 
+int {\bfseries My\+DLLRemove} (uint\+\_\+16t key)
+\item 
+\Hypertarget{DLL_8c_a17b12691fe5a74abef1b3b82cafb8bbc}\label{DLL_8c_a17b12691fe5a74abef1b3b82cafb8bbc} 
+int {\bfseries My\+DLLFind} (uint\+\_\+16t key)
+\item 
+\Hypertarget{DLL_8c_a1bd2315d10a4e685979e179c9dbf97b2}\label{DLL_8c_a1bd2315d10a4e685979e179c9dbf97b2} 
+int {\bfseries My\+DLLFind\+Next} (uint\+\_\+16t key)
+\item 
+\Hypertarget{DLL_8c_a4fb303324f0e07536db8d6d73286219d}\label{DLL_8c_a4fb303324f0e07536db8d6d73286219d} 
+int {\bfseries My\+DLLFind\+Previous} (uint\+\_\+16t key)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Implementação das funções relativas ao modulo DLL. 
+
+Neste ficheiro são implementadas as funções referidas no ficheiro \doxylink{DLL_8h}{DLL.\+h} e que mais tarde a usar em projetos que necessitem das funções deste módulo
+
+\begin{DoxyAuthor}{Autor}
+Guilherme Santos, 103143 
+
+Francisco Bastos, 103359 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Data}
+15/03/2025 
+\end{DoxyDate}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000001}{Bug}}]Sem bugs encontrdaos \end{DoxyRefDesc}

@@ -1,0 +1,89 @@
+\doxysection{DLL.\+h}
+\hypertarget{DLL_8h_source}{}\label{DLL_8h_source}\mbox{\hyperlink{DLL_8h}{Ir para a documentação deste ficheiro.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ struc\ node\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{int}\ id;}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{int}\ size;}
+\DoxyCodeLine{00018\ \ \ \ \ struc\ node\ *next;}
+\DoxyCodeLine{00019\ \ \ \ \ struc\ node\ *prev;}
+\DoxyCodeLine{00020\ \}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{comment}{/*\ \(\backslash\)brief\ Inicialização\ do\ modulo\ DLL}}
+\DoxyCodeLine{00023\ \textcolor{comment}{*}}
+\DoxyCodeLine{00024\ \textcolor{comment}{*\ Inicialização\ do\ modulo,\ com\ alocação\ estática.\ Para\ a\ função\ são\ passados\ como\ }}
+\DoxyCodeLine{00025\ \textcolor{comment}{*\ argumentos\ o\ número\ máximo\ de\ elementos\ e\ o\ tamanho\ de\ cada\ argumento}}
+\DoxyCodeLine{00026\ \textcolor{comment}{*}}
+\DoxyCodeLine{00027\ \textcolor{comment}{*\ \(\backslash\)author\ Francisco\ Bastos,\ 103359}}
+\DoxyCodeLine{00028\ \textcolor{comment}{*\ \(\backslash\)param[ne,es]\ ne,\ argumento\ que\ indica\ o\ número\ de\ elementos\ da\ DLL\ }}
+\DoxyCodeLine{00029\ \textcolor{comment}{*\ \(\backslash\)param[ne,es]\ es,\ argumento\ que\ indica\ o\ tamanho\ dos\ elementos\ da\ DLL}}
+\DoxyCodeLine{00030\ \textcolor{comment}{*\ \(\backslash\)date\ 15/03/2025}}
+\DoxyCodeLine{00031\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00032\ \textcolor{keywordtype}{void}\ MyDLLInit(\textcolor{keywordtype}{int}\ ne,\ \textcolor{keywordtype}{int}\ es);}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{comment}{/*\ \(\backslash\)brief\ Adição\ de\ dados\ a\ um\ elemento\ da\ linked\ list}}
+\DoxyCodeLine{00035\ \textcolor{comment}{*}}
+\DoxyCodeLine{00036\ \textcolor{comment}{*\ Adição\ de\ um\ elemento\ à\ DLL\ ...\ .\ É\ passado\ como\ argumento\ uma\ key,\ que\ indica\ a}}
+\DoxyCodeLine{00037\ \textcolor{comment}{*\ posição\ da\ DLL\ a\ ser\ inserido.\ E\ a\ função\ retorna\ um\ valor\ a\ indicar\ se\ foi\ possível\ ou}}
+\DoxyCodeLine{00038\ \textcolor{comment}{*\ não\ fazer\ a\ adição\ pretendida.}}
+\DoxyCodeLine{00039\ \textcolor{comment}{*}}
+\DoxyCodeLine{00040\ \textcolor{comment}{*\ \(\backslash\)author\ Francisco\ Bastos,\ 103359}}
+\DoxyCodeLine{00041\ \textcolor{comment}{*\ \(\backslash\)param[key]\ key,\ unsiged\ int\ 16,\ argumento\ que\ identifica\ o\ elemento\ da\ DLL\ a\ aceder.}}
+\DoxyCodeLine{00042\ \textcolor{comment}{*\ \(\backslash\)return\ Retorno\ do\ valor\ 0\ ou\ 1}}
+\DoxyCodeLine{00043\ \textcolor{comment}{*\ \(\backslash\)date\ 15/03/2025}}
+\DoxyCodeLine{00044\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00045\ \textcolor{keywordtype}{int}\ MyDLLInsert(uint\_16t\ key);}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{comment}{/*\ \(\backslash\)brief\ Remoção\ dos\ dados\ de\ um\ elemento\ da\ linked\ list}}
+\DoxyCodeLine{00049\ \textcolor{comment}{*}}
+\DoxyCodeLine{00050\ \textcolor{comment}{*\ A\ função\ remove\ um\ elemento\ da\ DLL.\ O\ elemento\ a\ remover\ é\ identificado\ por\ uma\ key}}
+\DoxyCodeLine{00051\ \textcolor{comment}{*\ passada\ como\ argumento\ para\ a\ função.\ A\ função\ retorna\ um\ valor\ consoante\ o\ sucesso,\ ou}}
+\DoxyCodeLine{00052\ \textcolor{comment}{*\ não,\ remover\ o\ elemento\ com\ pretendido.}}
+\DoxyCodeLine{00053\ \textcolor{comment}{*}}
+\DoxyCodeLine{00054\ \textcolor{comment}{*\ \(\backslash\)author\ Francisco\ Bastos,\ 103359}}
+\DoxyCodeLine{00055\ \textcolor{comment}{*\ \(\backslash\)param[key]\ key,\ unsiged\ int\ 16,\ argumento\ que\ identifica\ o\ elemento\ da\ DLL\ a\ aceder}}
+\DoxyCodeLine{00056\ \textcolor{comment}{*\ \(\backslash\)return\ Retorno\ do\ valor\ 0\ ou\ 1\ }}
+\DoxyCodeLine{00057\ \textcolor{comment}{*\ \(\backslash\)date\ 15/03/2025}}
+\DoxyCodeLine{00058\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00059\ \textcolor{keywordtype}{int}\ MyDLLRemove(uint\_16t\ key);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \textcolor{comment}{/*\ \(\backslash\)brief\ Função\ para\ verificar\ os\ dados\ relativos\ a\ um\ elemento}}
+\DoxyCodeLine{00062\ \textcolor{comment}{*}}
+\DoxyCodeLine{00063\ \textcolor{comment}{*\ Acesso\ a\ um\ elemento\ da\ DLL\ através\ de\ uma\ key.\ Fazendo\ o\ retorno\ do\ dados,}}
+\DoxyCodeLine{00064\ \textcolor{comment}{*\ identificados\ pela\ sua\ key,\ ou\ um\ erro\ caso\ não\ existam\ dados.}}
+\DoxyCodeLine{00065\ \textcolor{comment}{*}}
+\DoxyCodeLine{00066\ \textcolor{comment}{*\ \(\backslash\)author\ Francisco\ Bastos,\ 103359}}
+\DoxyCodeLine{00067\ \textcolor{comment}{*\ \(\backslash\)param[key]\ key,\ unsiged\ int\ 16,\ argumento\ que\ identifica\ o\ elemento\ da\ DLL\ a\ aceder}}
+\DoxyCodeLine{00068\ \textcolor{comment}{*\ \(\backslash\)return\ Retorno\ dos\ dados\ relativos\ ao\ elemento\ ou\ 0\ }}
+\DoxyCodeLine{00069\ \textcolor{comment}{*\ \(\backslash\)date\ 15/03/2025}}
+\DoxyCodeLine{00070\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00071\ \textcolor{keywordtype}{int}\ MyDLLFind(uint\_16t\ key);}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \textcolor{comment}{/*\ \(\backslash\)brief\ Função\ para\ verificar\ os\ dados\ relativos\ de\ um\ próximo\ elemento}}
+\DoxyCodeLine{00074\ \textcolor{comment}{*}}
+\DoxyCodeLine{00075\ \textcolor{comment}{*\ Acesso\ ao\ próximo\ elemento\ da\ DLL,\ relativo\ à\ key.\ Fazendo\ o\ retorno\ do\ dados,}}
+\DoxyCodeLine{00076\ \textcolor{comment}{*\ identificados\ pela\ sua\ key,\ ou\ um\ erro\ caso\ não\ existam\ dados.}}
+\DoxyCodeLine{00077\ \textcolor{comment}{*}}
+\DoxyCodeLine{00078\ \textcolor{comment}{*\ \(\backslash\)author\ Francisco\ Bastos,\ 103359}}
+\DoxyCodeLine{00079\ \textcolor{comment}{*\ \(\backslash\)param[key]\ key,\ unsiged\ int\ 16,\ argumento\ que\ identifica\ o\ elemento\ da\ DLL\ a\ aceder}}
+\DoxyCodeLine{00080\ \textcolor{comment}{*\ \(\backslash\)return\ Retorno\ dos\ dados\ relativos\ ao\ elemento\ ou\ 0}}
+\DoxyCodeLine{00081\ \textcolor{comment}{*\ \(\backslash\)date\ 15/03/2025}}
+\DoxyCodeLine{00082\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00083\ \textcolor{keywordtype}{int}\ MyDLLFindNext(uint\_16t\ key);}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \textcolor{comment}{/*\ \(\backslash\)brief\ Função\ para\ verificar\ os\ dados\ relativos\ de\ um\ elemento\ anterior}}
+\DoxyCodeLine{00086\ \textcolor{comment}{*}}
+\DoxyCodeLine{00087\ \textcolor{comment}{*\ Acesso\ ao\ elemento\ anterior\ da\ DLL,\ relativo\ à\ key.\ Fazendo\ o\ retorno\ do\ dados,}}
+\DoxyCodeLine{00088\ \textcolor{comment}{*\ identificados\ pela\ sua\ key,\ ou\ um\ erro\ caso\ não\ existam\ dados.}}
+\DoxyCodeLine{00089\ \textcolor{comment}{*}}
+\DoxyCodeLine{00090\ \textcolor{comment}{*\ \(\backslash\)author\ Francisco\ Bastos,\ 103359}}
+\DoxyCodeLine{00091\ \textcolor{comment}{*\ \(\backslash\)param[key]\ key,\ unsiged\ int\ 16,\ argumento\ que\ identifica\ o\ elemento\ da\ DLL\ a\ aceder}}
+\DoxyCodeLine{00092\ \textcolor{comment}{*\ \(\backslash\)return\ Retorno\ dos\ dados\ relativos\ ao\ elemento\ ou\ 0}}
+\DoxyCodeLine{00093\ \textcolor{comment}{*\ \(\backslash\)date\ 15/03/2025}}
+\DoxyCodeLine{00094\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00095\ \textcolor{keywordtype}{int}\ MyDLLFindPrevious(uint\_16t\ key);}
+
+\end{DoxyCode}
