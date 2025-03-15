@@ -11,6 +11,7 @@
 */
 
 #include <stdio.h>
+#include <stdint.h>
 
 #define MAX_ELEMENTS 100
 #define ELEMENT_SIZE 32
