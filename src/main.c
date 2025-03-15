@@ -22,7 +22,7 @@ int main() {
 
         switch (choice) {
             case 1:
-                printf("Digite a chave: ");
+                printf("\nDigite a chave: ");
                 scanf("%hu", &key);
                 printf("Digite os dados: ");
                 scanf("%s", data);
@@ -34,7 +34,7 @@ int main() {
                 break;
 
             case 2:
-                printf("Digite a chave a remover: ");
+                printf("\nDigite a chave a remover: ");
                 scanf("%hu", &key);
                 if (MyDLLRemove(&myDLL, key) == 0) {
                     printf("Elemento removido!\n");
@@ -44,19 +44,19 @@ int main() {
                 break;
 
             case 3:
-                printf("Digite a chave para encontrar: ");
+                printf("\nDigite a chave para encontrar: ");
                 scanf("%hu", &key);
                 MyDLLFind(&myDLL, key);
                 break;
 
             case 4:
-                printf("Digite a chave para encontrar o próximo: ");
+                printf("\nDigite a chave para encontrar o próximo: ");
                 scanf("%hu", &key);
                 MyDLLFindNext(&myDLL, key);
                 break;
 
             case 5:
-                printf("Digite a chave para encontrar o anterior: ");
+                printf("\nDigite a chave para encontrar o anterior: ");
                 scanf("%hu", &key);
                 MyDLLFindPrevious(&myDLL, key);
                 break;
