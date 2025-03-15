@@ -12,12 +12,24 @@
 
 #include <stdio.h>
 
-struc node {
-    int id;
-    int size;
-    struc node *next;
-    struc node *prev;
-}
+#define MAX_ELEMENTS 100
+#define ELEMENT_SIZE 32
+
+// Estrutura do nó da DLL
+typedef struct DLLNode {
+    uint16_t key; // Unique identifier for the node
+    uint8_t data[ELEMENT_SIZE]; // Data storage
+    struct DLLNode* prev; // Pointer to the previous node
+    struct DLLNode* next; // Pointer to the next node
+} DLLNode;
+
+// Estrutura da DLL
+typedef struct {
+    DLLNode nodes[MAX_ELEMENTS];
+    DLLNode* head;
+    DLLNode* tail;
+    int count;
+} DLL;
 
 /* \brief Inicialização do modulo DLL
 *
@@ -29,7 +41,7 @@ struc node {
 * \param[ne,es] es, argumento que indica o tamanho dos elementos da DLL
 * \date 15/03/2025
 */
-void MyDLLInit(int ne, int es);
+void MyDLLInit(DLL *dll);
 
 /* \brief Adição de dados a um elemento da linked list
 *
@@ -42,7 +54,7 @@ void MyDLLInit(int ne, int es);
 * \return Retorno do valor 0 ou 1
 * \date 15/03/2025
 */
-int MyDLLInsert(uint_16t key);
+int MyDLLInsert(DLL *dll, uint16_t key, uint8_t data[]);
 
 
 /* \brief Remoção dos dados de um elemento da linked list
@@ -56,7 +68,7 @@ int MyDLLInsert(uint_16t key);
 * \return Retorno do valor 0 ou 1 
 * \date 15/03/2025
 */
-int MyDLLRemove(uint_16t key);
+int MyDLLRemove(DLL *dll,uint16_t key);
 
 /* \brief Função para verificar os dados relativos a um elemento
 *
@@ -68,7 +80,7 @@ int MyDLLRemove(uint_16t key);
 * \return Retorno dos dados relativos ao elemento ou 0 
 * \date 15/03/2025
 */
-int MyDLLFind(uint_16t key);
+int MyDLLFind(DLL *dll,uint16_t key);
 
 /* \brief Função para verificar os dados relativos de um próximo elemento
 *
@@ -80,7 +92,7 @@ int MyDLLFind(uint_16t key);
 * \return Retorno dos dados relativos ao elemento ou 0
 * \date 15/03/2025
 */
-int MyDLLFindNext(uint_16t key);
+int MyDLLFindNext(DLL *dll,uint16_t key);
 
 /* \brief Função para verificar os dados relativos de um elemento anterior
 *
@@ -92,4 +104,13 @@ int MyDLLFindNext(uint_16t key);
 * \return Retorno dos dados relativos ao elemento ou 0
 * \date 15/03/2025
 */
-int MyDLLFindPrevious(uint_16t key);
+int MyDLLFindPrevious(DLL *dll,uint16_t key);
+
+
+
+
+
+
+
+
+
