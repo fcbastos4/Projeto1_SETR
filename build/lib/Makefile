@@ -57,10 +57,17 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
+<<<<<<< HEAD
 CMAKE_SOURCE_DIR = "/home/francisco/Desktop/Projeto 1/Projeto1_SETR/src"
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = "/home/francisco/Desktop/Projeto 1/Projeto1_SETR/build"
+=======
+CMAKE_SOURCE_DIR = /home/francisco/Desktop/Projeto1_SETR/src
+
+# The top-level build directory on which CMake was run.
+CMAKE_BINARY_DIR = /home/francisco/Desktop/Projeto1_SETR/build
+>>>>>>> francisco
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +94,24 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
+<<<<<<< HEAD
 	cd "/home/francisco/Desktop/Projeto 1/Projeto1_SETR/build" && $(CMAKE_COMMAND) -E cmake_progress_start "/home/francisco/Desktop/Projeto 1/Projeto1_SETR/build/CMakeFiles" "/home/francisco/Desktop/Projeto 1/Projeto1_SETR/build/lib//CMakeFiles/progress.marks"
 	cd "/home/francisco/Desktop/Projeto 1/Projeto1_SETR/build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "/home/francisco/Desktop/Projeto 1/Projeto1_SETR/build/CMakeFiles" 0
+=======
+	cd /home/francisco/Desktop/Projeto1_SETR/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/francisco/Desktop/Projeto1_SETR/build/CMakeFiles /home/francisco/Desktop/Projeto1_SETR/build/lib//CMakeFiles/progress.marks
+	cd /home/francisco/Desktop/Projeto1_SETR/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/francisco/Desktop/Projeto1_SETR/build/CMakeFiles 0
+>>>>>>> francisco
 .PHONY : all
 
 # The main clean target
 clean:
+<<<<<<< HEAD
 	cd "/home/francisco/Desktop/Projeto 1/Projeto1_SETR/build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/clean
+=======
+	cd /home/francisco/Desktop/Projeto1_SETR/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/clean
+>>>>>>> francisco
 .PHONY : clean
 
 # The main clean target
@@ -103,22 +120,38 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
+<<<<<<< HEAD
 	cd "/home/francisco/Desktop/Projeto 1/Projeto1_SETR/build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/preinstall
+=======
+	cd /home/francisco/Desktop/Projeto1_SETR/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/preinstall
+>>>>>>> francisco
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
+<<<<<<< HEAD
 	cd "/home/francisco/Desktop/Projeto 1/Projeto1_SETR/build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/preinstall
+=======
+	cd /home/francisco/Desktop/Projeto1_SETR/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/preinstall
+>>>>>>> francisco
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
+<<<<<<< HEAD
 	cd "/home/francisco/Desktop/Projeto 1/Projeto1_SETR/build" && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+=======
+	cd /home/francisco/Desktop/Projeto1_SETR/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+>>>>>>> francisco
 .PHONY : depend
 
 # Convenience name for target.
 lib/CMakeFiles/dllLib.dir/rule:
+<<<<<<< HEAD
 	cd "/home/francisco/Desktop/Projeto 1/Projeto1_SETR/build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/CMakeFiles/dllLib.dir/rule
+=======
+	cd /home/francisco/Desktop/Projeto1_SETR/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/CMakeFiles/dllLib.dir/rule
+>>>>>>> francisco
 .PHONY : lib/CMakeFiles/dllLib.dir/rule
 
 # Convenience name for target.
@@ -127,7 +160,11 @@ dllLib: lib/CMakeFiles/dllLib.dir/rule
 
 # fast build rule for target.
 dllLib/fast:
+<<<<<<< HEAD
 	cd "/home/francisco/Desktop/Projeto 1/Projeto1_SETR/build" && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/dllLib.dir/build.make lib/CMakeFiles/dllLib.dir/build
+=======
+	cd /home/francisco/Desktop/Projeto1_SETR/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/dllLib.dir/build.make lib/CMakeFiles/dllLib.dir/build
+>>>>>>> francisco
 .PHONY : dllLib/fast
 
 DLL.o: DLL.c.o
@@ -135,7 +172,11 @@ DLL.o: DLL.c.o
 
 # target to build an object file
 DLL.c.o:
+<<<<<<< HEAD
 	cd "/home/francisco/Desktop/Projeto 1/Projeto1_SETR/build" && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/dllLib.dir/build.make lib/CMakeFiles/dllLib.dir/DLL.c.o
+=======
+	cd /home/francisco/Desktop/Projeto1_SETR/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/dllLib.dir/build.make lib/CMakeFiles/dllLib.dir/DLL.c.o
+>>>>>>> francisco
 .PHONY : DLL.c.o
 
 DLL.i: DLL.c.i
@@ -143,7 +184,11 @@ DLL.i: DLL.c.i
 
 # target to preprocess a source file
 DLL.c.i:
+<<<<<<< HEAD
 	cd "/home/francisco/Desktop/Projeto 1/Projeto1_SETR/build" && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/dllLib.dir/build.make lib/CMakeFiles/dllLib.dir/DLL.c.i
+=======
+	cd /home/francisco/Desktop/Projeto1_SETR/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/dllLib.dir/build.make lib/CMakeFiles/dllLib.dir/DLL.c.i
+>>>>>>> francisco
 .PHONY : DLL.c.i
 
 DLL.s: DLL.c.s
@@ -151,7 +196,11 @@ DLL.s: DLL.c.s
 
 # target to generate assembly for a file
 DLL.c.s:
+<<<<<<< HEAD
 	cd "/home/francisco/Desktop/Projeto 1/Projeto1_SETR/build" && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/dllLib.dir/build.make lib/CMakeFiles/dllLib.dir/DLL.c.s
+=======
+	cd /home/francisco/Desktop/Projeto1_SETR/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/dllLib.dir/build.make lib/CMakeFiles/dllLib.dir/DLL.c.s
+>>>>>>> francisco
 .PHONY : DLL.c.s
 
 # Help Target
@@ -177,6 +226,10 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
+<<<<<<< HEAD
 	cd "/home/francisco/Desktop/Projeto 1/Projeto1_SETR/build" && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+=======
+	cd /home/francisco/Desktop/Projeto1_SETR/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+>>>>>>> francisco
 .PHONY : cmake_check_build_system
 

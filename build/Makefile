@@ -57,10 +57,17 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
+<<<<<<< HEAD
 CMAKE_SOURCE_DIR = "/home/francisco/Desktop/Projeto 1/Projeto1_SETR/src"
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = "/home/francisco/Desktop/Projeto 1/Projeto1_SETR/build"
+=======
+CMAKE_SOURCE_DIR = /home/francisco/Desktop/Projeto1_SETR/src
+
+# The top-level build directory on which CMake was run.
+CMAKE_BINARY_DIR = /home/francisco/Desktop/Projeto1_SETR/build
+>>>>>>> francisco
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +94,15 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
+<<<<<<< HEAD
 	$(CMAKE_COMMAND) -E cmake_progress_start "/home/francisco/Desktop/Projeto 1/Projeto1_SETR/build/CMakeFiles" "/home/francisco/Desktop/Projeto 1/Projeto1_SETR/build//CMakeFiles/progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
 	$(CMAKE_COMMAND) -E cmake_progress_start "/home/francisco/Desktop/Projeto 1/Projeto1_SETR/build/CMakeFiles" 0
+=======
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/francisco/Desktop/Projeto1_SETR/build/CMakeFiles /home/francisco/Desktop/Projeto1_SETR/build//CMakeFiles/progress.marks
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/francisco/Desktop/Projeto1_SETR/build/CMakeFiles 0
+>>>>>>> francisco
 .PHONY : all
 
 # The main clean target

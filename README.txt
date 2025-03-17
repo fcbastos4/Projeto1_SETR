@@ -1,5 +1,6 @@
 ** PARA COMPILAR **
 
+<<<<<<< HEAD
 
 ```
 cd mkdir build
@@ -20,3 +21,9 @@ firefox html/index.html &
 ```
 
 
+=======
+ gcc -o main main.c
+ ./main
+ 
+ ** Atualizar mais tarde mas cmake **
+>>>>>>> francisco

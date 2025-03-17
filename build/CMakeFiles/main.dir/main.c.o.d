@@ -1,5 +1,9 @@
 CMakeFiles/main.dir/main.c.o: \
+<<<<<<< HEAD
  /home/francisco/Desktop/Projeto\ 1/Projeto1_SETR/src/main.c \
+=======
+ /home/francisco/Desktop/Projeto1_SETR/src/main.c \
+>>>>>>> francisco
  /usr/include/stdc-predef.h /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -24,7 +28,11 @@ CMakeFiles/main.dir/main.c.o: \
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
  /usr/include/x86_64-linux-gnu/bits/floatn.h \
  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
+<<<<<<< HEAD
  /home/francisco/Desktop/Projeto\ 1/Projeto1_SETR/src/lib/DLL.h \
+=======
+ /home/francisco/Desktop/Projeto1_SETR/src/lib/DLL.h \
+>>>>>>> francisco
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/wchar.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \

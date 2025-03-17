@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> francisco
 /** \file DLL.h
 * \brief Funções e estruturas de dados relativos ao modulo DLL, e seus comentários.
 *
@@ -13,8 +17,13 @@
 #include <stdio.h>
 #include <stdint.h>
 
+<<<<<<< HEAD
 #define MAX_ELEMENTS 100
 #define ELEMENT_SIZE 32
+=======
+#define MAX_ELEMENTS 4
+#define ELEMENT_SIZE 50
+>>>>>>> francisco
 
 // Estrutura do nó da DLL
 typedef struct DLLNode {
@@ -108,10 +117,8 @@ int MyDLLFindNext(DLL *dll,uint16_t key);
 int MyDLLFindPrevious(DLL *dll,uint16_t key);
 
 
+void MyDLLClear(DLL *dll) ;
 
+uint8_t* MyDLLShowElements(DLL *dll);
 
-
-
-
-
-
+void MyDLLSortAscending(DLL *dll);
