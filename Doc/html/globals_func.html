@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Doubly Linked List: Documentação de Projeto 1, SETR</title>
+<title>Doubly Linked List: Globais</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -68,50 +68,18 @@ $(function() {
 </div>
 </div>
 
-<div><div class="header">
-  <div class="headertitle"><div class="title">Documentação de Projeto 1, SETR </div></div>
-</div><!--header-->
 <div class="contents">
-<div class="textblock"><h2><a class="anchor" id="autotoc_md0"></a>
-Introdução</h2>
-<ul>
-<li>Neste primeiro projeto é pretendido desenvolver um módulo de uma dupla lista ligada. Na documentação podemos encontrar um explicação geral do desenvolvimento do projeto</li>
+<div class="textblock">Esta é a list de todas as funções documentadas com links para a documentação:</div><ul>
+<li>MyDLLClear()&#160;:&#160;<a class="el" href="DLL_8h.html#a5581d3ad5b66b8228ae0c26883ad99b9">DLL.h</a>, <a class="el" href="DLL_8c.html#a5581d3ad5b66b8228ae0c26883ad99b9">DLL.c</a></li>
+<li>MyDLLFind()&#160;:&#160;<a class="el" href="DLL_8c.html#af933431f030f2428e9b8fe206e73957d">DLL.c</a>, <a class="el" href="DLL_8h.html#af933431f030f2428e9b8fe206e73957d">DLL.h</a></li>
+<li>MyDLLFindNext()&#160;:&#160;<a class="el" href="DLL_8c.html#afb10507f3f16e160a300fb15bb3f4e1b">DLL.c</a>, <a class="el" href="DLL_8h.html#afb10507f3f16e160a300fb15bb3f4e1b">DLL.h</a></li>
+<li>MyDLLFindPrevious()&#160;:&#160;<a class="el" href="DLL_8c.html#ade051f9229a2422b1b2e87592a3d7560">DLL.c</a>, <a class="el" href="DLL_8h.html#ade051f9229a2422b1b2e87592a3d7560">DLL.h</a></li>
+<li>MyDLLInit()&#160;:&#160;<a class="el" href="DLL_8h.html#a7e40089da30029df31f64e56fe9eb165">DLL.h</a>, <a class="el" href="DLL_8c.html#a7e40089da30029df31f64e56fe9eb165">DLL.c</a></li>
+<li>MyDLLInsert()&#160;:&#160;<a class="el" href="DLL_8c.html#a5fbab776f43e639b1562fb399bd4c84e">DLL.c</a>, <a class="el" href="DLL_8h.html#a5fbab776f43e639b1562fb399bd4c84e">DLL.h</a></li>
+<li>MyDLLRemove()&#160;:&#160;<a class="el" href="DLL_8c.html#ab9b97c2b109259628223b4b2dc3b81e4">DLL.c</a>, <a class="el" href="DLL_8h.html#ab9b97c2b109259628223b4b2dc3b81e4">DLL.h</a></li>
+<li>MyDLLShowElements()&#160;:&#160;<a class="el" href="DLL_8c.html#a7c7804b0a9a36b00129b3836e5b77318">DLL.c</a>, <a class="el" href="DLL_8h.html#a7c7804b0a9a36b00129b3836e5b77318">DLL.h</a></li>
+<li>MyDLLSortAscending()&#160;:&#160;<a class="el" href="DLL_8c.html#aa7d6dcfcdfffbbff4acdcf0b315e7d6d">DLL.c</a>, <a class="el" href="DLL_8h.html#aa7d6dcfcdfffbbff4acdcf0b315e7d6d">DLL.h</a></li>
 </ul>
-<h2><a class="anchor" id="autotoc_md1"></a>
-Estrutura de código</h2>
-<ul>
-<li><code>../src/lib</code> - Ficheiros .C e .h</li>
-<li><code>../Doc/</code> - Documentação</li>
-</ul>
-<h2><a class="anchor" id="autotoc_md2"></a>
-Secções</h2>
-<ul>
-<li>Módulos</li>
-<li>Estruturas de dados</li>
-<li>Ficheiros</li>
-</ul>
-<h2><a class="anchor" id="autotoc_md3"></a>
-Módulos</h2>
-<ul>
-<li><b>Dupla Lista Ligada (<a class="el" href="structDLL.html">DLL</a>)</b>: Implementação de uma lista ligada, com várias operações disponíveis, sendo possível também aceder ao elemento anterior e posterior uma vez que é duplamente ligado.</li>
-</ul>
-<h2><a class="anchor" id="autotoc_md4"></a>
-Estruturas de Dados</h2>
-<ul>
-<li><b><a class="el" href="structDLLNode.html">DLLNode</a></b>: Nodo de ligação da lista ligada, em que consiste num indentificador e o respetivos dados.</li>
-<li><b><a class="el" href="structDLL.html">DLL</a></b>: Estrutura da lista ligada, sendo constituida por número máximo de elementos/nodos, primeiro(head) e último(tail) nodo da lista.</li>
-</ul>
-<h2><a class="anchor" id="autotoc_md5"></a>
-Ficheiros</h2>
-<ul>
-<li><b>dll.h</b>: Ficheiro header onde são definidos a estrutura de dados e as funções a implementar para o modúlo.</li>
-<li><b>dll.c</b>: Implementação das funções do modúlo.</li>
-<li><b>main.c</b>: Ficheiro de teste do modúlo a simular a dupla lista ligada</li>
-</ul>
-<dl class="section author"><dt>Autor</dt><dd>Guilherme Santos, <a href="#" onclick="location.href='mai'+'lto:'+'gui'+'.s'+'ant'+'os'+'@ua'+'.p'+'t'; return false;">gui.s<span class="obfuscator">.nosp@m.</span>anto<span class="obfuscator">.nosp@m.</span>s@ua.<span class="obfuscator">.nosp@m.</span>pt</a> </dd>
-<dd>
-Francisco Bastos, <a href="#" onclick="location.href='mai'+'lto:'+'fcb'+'as'+'tos'+'4@'+'ua.'+'pt'; return false;">fcbas<span class="obfuscator">.nosp@m.</span>tos4<span class="obfuscator">.nosp@m.</span>@ua.p<span class="obfuscator">.nosp@m.</span>t</a> </dd></dl>
-</div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
