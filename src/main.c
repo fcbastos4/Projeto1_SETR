@@ -1,3 +1,12 @@
+/** \file main.c
+* \brief Teste do modulo DLL 
+*
+* Neste ficheiro é implementado um código para realizar testes às funções implementadas no ficheiro DLL.c
+*
+* \author Guilherme Santos, 103143
+* \author Francisco Bastos, 103359
+* \date 16/03/2025
+*/
 #include <stdio.h>
 #include "DLL.h"
 

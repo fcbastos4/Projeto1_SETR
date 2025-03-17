@@ -1,13 +1,10 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> francisco
 /** \file DLL.h
 * \brief Funções e estruturas de dados relativos ao modulo DLL, e seus comentários
 *
-* Está inicializada a estrutura de um nodo e as funções de inicialização da lista ligada,
+* Está inicializada a estrutura de um nó e as funções de inicialização da lista ligada,
 * de inserção e remoção de elemntos, de verificação de dados de um elemento, tal como dos
 * dados de um proximo/anterior elemento 
+* As implementações feitas foram baseadas em exemplos do chatGPT e do site https://www.programiz.com/dsa/doubly-linked-list
 *
 * \author Guilherme Santos, 103143
 * \date 15/03/2025
@@ -16,13 +13,8 @@
 #include <stdio.h>
 #include <stdint.h>
 
-<<<<<<< HEAD
-#define MAX_ELEMENTS 100
-#define ELEMENT_SIZE 32
-=======
 #define MAX_ELEMENTS 4
 #define ELEMENT_SIZE 50
->>>>>>> francisco
 
 // Estrutura do nó da DLL
 typedef struct DLLNode {
@@ -44,7 +36,7 @@ typedef struct {
 *
 * Inicialização do modulo, com alocação estática. Para a função são passados como 
 * argumentos um ponteiro da estrutura da DLL, que contém o número máximo de elementos e o
-* primeiro e último nodo
+* primeiro e último nó
 *
 * \author Francisco Bastos, 103359
 * \param[in] *dll, ponteiro da estrutura da DLL
@@ -54,7 +46,7 @@ void MyDLLInit(DLL *dll);
 
 /** \brief Adição de dados a um elemento da linked list
 *
-* Adição de um elemento à DLL ... . É passado como argumento uma key, que indica a
+* Adição de um elemento à DLL. É passado como argumento uma key, que indica a
 * posição da DLL a ser inserido. E a função retorna um valor a indicar se foi possível ou
 * não fazer a adição pretendida. Fazendo o retorno de 0 se foi bem sucedido ou -1 se houve
 * algum erro.
@@ -62,7 +54,7 @@ void MyDLLInit(DLL *dll);
 * \author Francisco Bastos, 103359
 * \param[in] *dll, ponteiro da estrutura da DLL
 * \param[in] key, unsiged int 16, argumento que identifica o elemento da DLL a aceder.
-* \param[in] data[], dados a inserir no nodo
+* \param[in] data[], dados a inserir no n
 * \return 0 ou -1
 * \date 15/03/2025
 */
@@ -128,7 +120,7 @@ int MyDLLFindPrevious(DLL *dll,uint16_t key);
 
 /** \brief Função para limpar a DLL
 *
-* A função faz a limpeza dos dados de todos os os nodos da lista ligada, sendo a ser
+* A função faz a limpeza dos dados de todos os os ns da lista ligada, sendo a ser
 * passada para a função o ponteiro com a lista em questão
 *
 * \author Francisco Bastos, 103359
@@ -137,14 +129,14 @@ int MyDLLFindPrevious(DLL *dll,uint16_t key);
 */
 void MyDLLClear(DLL *dll) ;
 
-/** \brief Função para mostrar os dados de todos os nodos
+/** \brief Função para mostrar os dados de todos os nós
 *
-* A função irá percorrer todos os nodos da lista, passada como argumento, e irá mostrar os
-* dados de todos os nodos da lista.
+* A função irá percorrer todos os ns da lista, passada como argumento, e irá mostrar os
+* dados de todos os nós da lista.
 * 
 * \author Francisco Bastos, 103359
 * \param[in] *dll, ponteiro da estrutura da DLL
-* \return Dados do nodo
+* \return Dados do nó
 * \date 17/03/2025
 */
 uint8_t* MyDLLShowElements(DLL *dll);
@@ -152,7 +144,7 @@ uint8_t* MyDLLShowElements(DLL *dll);
 /** \brief Função para fazer a ordenação ascendente dos dados da lista
 *
 * A função ordena os dados na lista, por ordem ascendente, ficando os dados de menor
-* valor nos primeiros nodos e os de maior valor nos últimos   
+* key nos primeiros nós e os de maior nos últimos   
 *
 * \author Francisco Bastos, 103359
 * \param[in] *dll, ponteiro da estrutura da DLL

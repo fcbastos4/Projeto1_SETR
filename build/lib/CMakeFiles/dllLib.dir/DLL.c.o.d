@@ -1,14 +1,8 @@
 lib/CMakeFiles/dllLib.dir/DLL.c.o: \
-<<<<<<< HEAD
  /home/francisco/Desktop/Projeto\ 1/Projeto1_SETR/src/lib/DLL.c \
  /usr/include/stdc-predef.h \
  /home/francisco/Desktop/Projeto\ 1/Projeto1_SETR/src/lib/DLL.h \
  /usr/include/stdio.h \
-=======
- /home/francisco/Desktop/Projeto1_SETR/src/lib/DLL.c \
- /usr/include/stdc-predef.h \
- /home/francisco/Desktop/Projeto1_SETR/src/lib/DLL.h /usr/include/stdio.h \
->>>>>>> francisco
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \

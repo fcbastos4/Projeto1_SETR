@@ -1,15 +1,6 @@
-<<<<<<< HEAD
 /home/francisco/Desktop/Projeto 1/Projeto1_SETR/build/CMakeFiles/main.dir
 /home/francisco/Desktop/Projeto 1/Projeto1_SETR/build/CMakeFiles/edit_cache.dir
 /home/francisco/Desktop/Projeto 1/Projeto1_SETR/build/CMakeFiles/rebuild_cache.dir
 /home/francisco/Desktop/Projeto 1/Projeto1_SETR/build/lib/CMakeFiles/dllLib.dir
 /home/francisco/Desktop/Projeto 1/Projeto1_SETR/build/lib/CMakeFiles/edit_cache.dir
 /home/francisco/Desktop/Projeto 1/Projeto1_SETR/build/lib/CMakeFiles/rebuild_cache.dir
-=======
-/home/francisco/Desktop/Projeto1_SETR/build/CMakeFiles/main.dir
-/home/francisco/Desktop/Projeto1_SETR/build/CMakeFiles/edit_cache.dir
-/home/francisco/Desktop/Projeto1_SETR/build/CMakeFiles/rebuild_cache.dir
-/home/francisco/Desktop/Projeto1_SETR/build/lib/CMakeFiles/dllLib.dir
-/home/francisco/Desktop/Projeto1_SETR/build/lib/CMakeFiles/edit_cache.dir
-/home/francisco/Desktop/Projeto1_SETR/build/lib/CMakeFiles/rebuild_cache.dir
->>>>>>> francisco

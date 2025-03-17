@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Doubly Linked List: Código-Fonte de /home/gui/Desktop/ua/SETR/deu merda/Projeto1_SETR/src/lib/DLL.h</title>
+<title>Doubly Linked List: Código-Fonte de /home/francisco/Desktop/Projeto 1/Projeto1_SETR/src/lib/DLL.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -81,70 +81,62 @@ $(document).ready(function() { init_codefold(0); });
   <div class="headertitle"><div class="title">DLL.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="DLL_8h.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span>=======</div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>&gt;&gt;&gt;&gt;&gt;&gt;&gt; francisco</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<a href="DLL_8h.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#define MAX_ELEMENTS 4</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#define ELEMENT_SIZE 50</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#define MAX_ELEMENTS 100</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#define ELEMENT_SIZE 32</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>=======</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#define MAX_ELEMENTS 4</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#define ELEMENT_SIZE 50</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>&gt;&gt;&gt;&gt;&gt;&gt;&gt; francisco</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">// Estrutura do nó da DLL</span></div>
+<div class="foldopen" id="foldopen00020" data-start="{" data-end="};">
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="structDLLNode.html">   20</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structDLLNode.html">DLLNode</a> {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    uint16_t key; <span class="comment">// Unique identifier for the node</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    uint8_t data[ELEMENT_SIZE]; <span class="comment">// Data storage</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keyword">struct </span><a class="code hl_struct" href="structDLLNode.html">DLLNode</a>* prev; <span class="comment">// Pointer to the previous node</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keyword">struct </span><a class="code hl_struct" href="structDLLNode.html">DLLNode</a>* next; <span class="comment">// Pointer to the next node</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>} <a class="code hl_struct" href="structDLLNode.html">DLLNode</a>;</div>
+</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">// Estrutura do nó da DLL</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">// Estrutura da DLL</span></div>
 <div class="foldopen" id="foldopen00028" data-start="{" data-end="};">
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="structDLLNode.html">   28</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structDLLNode.html">DLLNode</a> {</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    uint16_t key; <span class="comment">// Unique identifier for the node</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    uint8_t data[ELEMENT_SIZE]; <span class="comment">// Data storage</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keyword">struct </span><a class="code hl_struct" href="structDLLNode.html">DLLNode</a>* prev; <span class="comment">// Pointer to the previous node</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keyword">struct </span><a class="code hl_struct" href="structDLLNode.html">DLLNode</a>* next; <span class="comment">// Pointer to the next node</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>} <a class="code hl_struct" href="structDLLNode.html">DLLNode</a>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="structDLL.html">   28</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <a class="code hl_struct" href="structDLLNode.html">DLLNode</a> nodes[MAX_ELEMENTS];</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <a class="code hl_struct" href="structDLLNode.html">DLLNode</a>* head;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <a class="code hl_struct" href="structDLLNode.html">DLLNode</a>* tail;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordtype">int</span> count;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>} <a class="code hl_struct" href="structDLL.html">DLL</a>;</div>
 </div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">// Estrutura da DLL</span></div>
-<div class="foldopen" id="foldopen00036" data-start="{" data-end="};">
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="structDLL.html">   36</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <a class="code hl_struct" href="structDLLNode.html">DLLNode</a> nodes[MAX_ELEMENTS];</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <a class="code hl_struct" href="structDLLNode.html">DLLNode</a>* head;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <a class="code hl_struct" href="structDLLNode.html">DLLNode</a>* tail;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordtype">int</span> count;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>} <a class="code hl_struct" href="structDLL.html">DLL</a>;</div>
-</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="keywordtype">void</span> <a class="code hl_function" href="DLL_8h.html#a7e40089da30029df31f64e56fe9eb165">MyDLLInit</a>(<a class="code hl_struct" href="structDLL.html">DLL</a> *dll);</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="keywordtype">int</span> <a class="code hl_function" href="DLL_8h.html#a5fbab776f43e639b1562fb399bd4c84e">MyDLLInsert</a>(<a class="code hl_struct" href="structDLL.html">DLL</a> *dll, uint16_t key, uint8_t data[]);</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="keywordtype">int</span> <a class="code hl_function" href="DLL_8h.html#ab9b97c2b109259628223b4b2dc3b81e4">MyDLLRemove</a>(<a class="code hl_struct" href="structDLL.html">DLL</a> *dll,uint16_t key);</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="keywordtype">int</span> <a class="code hl_function" href="DLL_8h.html#af933431f030f2428e9b8fe206e73957d">MyDLLFind</a>(<a class="code hl_struct" href="structDLL.html">DLL</a> *dll,uint16_t key);</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="keywordtype">int</span> <a class="code hl_function" href="DLL_8h.html#afb10507f3f16e160a300fb15bb3f4e1b">MyDLLFindNext</a>(<a class="code hl_struct" href="structDLL.html">DLL</a> *dll,uint16_t key);</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span><span class="keywordtype">int</span> <a class="code hl_function" href="DLL_8h.html#ade051f9229a2422b1b2e87592a3d7560">MyDLLFindPrevious</a>(<a class="code hl_struct" href="structDLL.html">DLL</a> *dll,uint16_t key);</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span><span class="keywordtype">void</span> <a class="code hl_function" href="DLL_8h.html#a5581d3ad5b66b8228ae0c26883ad99b9">MyDLLClear</a>(<a class="code hl_struct" href="structDLL.html">DLL</a> *dll) ;</div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>uint8_t* <a class="code hl_function" href="DLL_8h.html#a7c7804b0a9a36b00129b3836e5b77318">MyDLLShowElements</a>(<a class="code hl_struct" href="structDLL.html">DLL</a> *dll);</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span><span class="keywordtype">void</span> <a class="code hl_function" href="DLL_8h.html#aa7d6dcfcdfffbbff4acdcf0b315e7d6d">MyDLLSortAscending</a>(<a class="code hl_struct" href="structDLL.html">DLL</a> *dll);</div>
-<div class="ttc" id="aDLL_8h_html_a5581d3ad5b66b8228ae0c26883ad99b9"><div class="ttname"><a href="DLL_8h.html#a5581d3ad5b66b8228ae0c26883ad99b9">MyDLLClear</a></div><div class="ttdeci">void MyDLLClear(DLL *dll)</div><div class="ttdoc">Função para limpar a DLL.</div><div class="ttdef"><b>Definição</b> DLL.c:131</div></div>
-<div class="ttc" id="aDLL_8h_html_a5fbab776f43e639b1562fb399bd4c84e"><div class="ttname"><a href="DLL_8h.html#a5fbab776f43e639b1562fb399bd4c84e">MyDLLInsert</a></div><div class="ttdeci">int MyDLLInsert(DLL *dll, uint16_t key, uint8_t data[])</div><div class="ttdoc">Adição de dados a um elemento da linked list.</div><div class="ttdef"><b>Definição</b> DLL.c:29</div></div>
-<div class="ttc" id="aDLL_8h_html_a7c7804b0a9a36b00129b3836e5b77318"><div class="ttname"><a href="DLL_8h.html#a7c7804b0a9a36b00129b3836e5b77318">MyDLLShowElements</a></div><div class="ttdeci">uint8_t * MyDLLShowElements(DLL *dll)</div><div class="ttdoc">Função para mostrar os dados de todos os nodos.</div><div class="ttdef"><b>Definição</b> DLL.c:146</div></div>
-<div class="ttc" id="aDLL_8h_html_a7e40089da30029df31f64e56fe9eb165"><div class="ttname"><a href="DLL_8h.html#a7e40089da30029df31f64e56fe9eb165">MyDLLInit</a></div><div class="ttdeci">void MyDLLInit(DLL *dll)</div><div class="ttdoc">Inicialização do modulo DLL.</div><div class="ttdef"><b>Definição</b> DLL.c:18</div></div>
-<div class="ttc" id="aDLL_8h_html_aa7d6dcfcdfffbbff4acdcf0b315e7d6d"><div class="ttname"><a href="DLL_8h.html#aa7d6dcfcdfffbbff4acdcf0b315e7d6d">MyDLLSortAscending</a></div><div class="ttdeci">void MyDLLSortAscending(DLL *dll)</div><div class="ttdoc">Função para fazer a ordenação ascendente dos dados da lista.</div><div class="ttdef"><b>Definição</b> DLL.c:160</div></div>
-<div class="ttc" id="aDLL_8h_html_ab9b97c2b109259628223b4b2dc3b81e4"><div class="ttname"><a href="DLL_8h.html#ab9b97c2b109259628223b4b2dc3b81e4">MyDLLRemove</a></div><div class="ttdeci">int MyDLLRemove(DLL *dll, uint16_t key)</div><div class="ttdoc">Remoção dos dados de um elemento da linked list.</div><div class="ttdef"><b>Definição</b> DLL.c:59</div></div>
-<div class="ttc" id="aDLL_8h_html_ade051f9229a2422b1b2e87592a3d7560"><div class="ttname"><a href="DLL_8h.html#ade051f9229a2422b1b2e87592a3d7560">MyDLLFindPrevious</a></div><div class="ttdeci">int MyDLLFindPrevious(DLL *dll, uint16_t key)</div><div class="ttdoc">Função para verificar os dados relativos de um elemento anterior.</div><div class="ttdef"><b>Definição</b> DLL.c:114</div></div>
-<div class="ttc" id="aDLL_8h_html_af933431f030f2428e9b8fe206e73957d"><div class="ttname"><a href="DLL_8h.html#af933431f030f2428e9b8fe206e73957d">MyDLLFind</a></div><div class="ttdeci">int MyDLLFind(DLL *dll, uint16_t key)</div><div class="ttdoc">Função para verificar os dados relativos a um elemento.</div><div class="ttdef"><b>Definição</b> DLL.c:84</div></div>
-<div class="ttc" id="aDLL_8h_html_afb10507f3f16e160a300fb15bb3f4e1b"><div class="ttname"><a href="DLL_8h.html#afb10507f3f16e160a300fb15bb3f4e1b">MyDLLFindNext</a></div><div class="ttdeci">int MyDLLFindNext(DLL *dll, uint16_t key)</div><div class="ttdoc">Função para verificar os dados relativos de um próximo elemento.</div><div class="ttdef"><b>Definição</b> DLL.c:97</div></div>
-<div class="ttc" id="astructDLLNode_html"><div class="ttname"><a href="structDLLNode.html">DLLNode</a></div><div class="ttdef"><b>Definição</b> DLL.h:28</div></div>
-<div class="ttc" id="astructDLL_html"><div class="ttname"><a href="structDLL.html">DLL</a></div><div class="ttdef"><b>Definição</b> DLL.h:36</div></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keywordtype">void</span> <a class="code hl_function" href="DLL_8h.html#a7e40089da30029df31f64e56fe9eb165">MyDLLInit</a>(<a class="code hl_struct" href="structDLL.html">DLL</a> *dll);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="keywordtype">int</span> <a class="code hl_function" href="DLL_8h.html#a5fbab776f43e639b1562fb399bd4c84e">MyDLLInsert</a>(<a class="code hl_struct" href="structDLL.html">DLL</a> *dll, uint16_t key, uint8_t data[]);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="keywordtype">int</span> <a class="code hl_function" href="DLL_8h.html#ab9b97c2b109259628223b4b2dc3b81e4">MyDLLRemove</a>(<a class="code hl_struct" href="structDLL.html">DLL</a> *dll,uint16_t key);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="keywordtype">int</span> <a class="code hl_function" href="DLL_8h.html#af933431f030f2428e9b8fe206e73957d">MyDLLFind</a>(<a class="code hl_struct" href="structDLL.html">DLL</a> *dll,uint16_t key);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="keywordtype">int</span> <a class="code hl_function" href="DLL_8h.html#afb10507f3f16e160a300fb15bb3f4e1b">MyDLLFindNext</a>(<a class="code hl_struct" href="structDLL.html">DLL</a> *dll,uint16_t key);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="keywordtype">int</span> <a class="code hl_function" href="DLL_8h.html#ade051f9229a2422b1b2e87592a3d7560">MyDLLFindPrevious</a>(<a class="code hl_struct" href="structDLL.html">DLL</a> *dll,uint16_t key);</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span><span class="keywordtype">void</span> <a class="code hl_function" href="DLL_8h.html#a5581d3ad5b66b8228ae0c26883ad99b9">MyDLLClear</a>(<a class="code hl_struct" href="structDLL.html">DLL</a> *dll) ;</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>uint8_t* <a class="code hl_function" href="DLL_8h.html#a7c7804b0a9a36b00129b3836e5b77318">MyDLLShowElements</a>(<a class="code hl_struct" href="structDLL.html">DLL</a> *dll);</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span> </div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span><span class="keywordtype">void</span> <a class="code hl_function" href="DLL_8h.html#aa7d6dcfcdfffbbff4acdcf0b315e7d6d">MyDLLSortAscending</a>(<a class="code hl_struct" href="structDLL.html">DLL</a> *dll);</div>
+<div class="ttc" id="aDLL_8h_html_a5581d3ad5b66b8228ae0c26883ad99b9"><div class="ttname"><a href="DLL_8h.html#a5581d3ad5b66b8228ae0c26883ad99b9">MyDLLClear</a></div><div class="ttdeci">void MyDLLClear(DLL *dll)</div><div class="ttdoc">Função para limpar a DLL.</div><div class="ttdef"><b>Definição</b> DLL.c:132</div></div>
+<div class="ttc" id="aDLL_8h_html_a5fbab776f43e639b1562fb399bd4c84e"><div class="ttname"><a href="DLL_8h.html#a5fbab776f43e639b1562fb399bd4c84e">MyDLLInsert</a></div><div class="ttdeci">int MyDLLInsert(DLL *dll, uint16_t key, uint8_t data[])</div><div class="ttdoc">Adição de dados a um elemento da linked list.</div><div class="ttdef"><b>Definição</b> DLL.c:30</div></div>
+<div class="ttc" id="aDLL_8h_html_a7c7804b0a9a36b00129b3836e5b77318"><div class="ttname"><a href="DLL_8h.html#a7c7804b0a9a36b00129b3836e5b77318">MyDLLShowElements</a></div><div class="ttdeci">uint8_t * MyDLLShowElements(DLL *dll)</div><div class="ttdoc">Função para mostrar os dados de todos os nós.</div><div class="ttdef"><b>Definição</b> DLL.c:147</div></div>
+<div class="ttc" id="aDLL_8h_html_a7e40089da30029df31f64e56fe9eb165"><div class="ttname"><a href="DLL_8h.html#a7e40089da30029df31f64e56fe9eb165">MyDLLInit</a></div><div class="ttdeci">void MyDLLInit(DLL *dll)</div><div class="ttdoc">Inicialização do modulo DLL.</div><div class="ttdef"><b>Definição</b> DLL.c:19</div></div>
+<div class="ttc" id="aDLL_8h_html_aa7d6dcfcdfffbbff4acdcf0b315e7d6d"><div class="ttname"><a href="DLL_8h.html#aa7d6dcfcdfffbbff4acdcf0b315e7d6d">MyDLLSortAscending</a></div><div class="ttdeci">void MyDLLSortAscending(DLL *dll)</div><div class="ttdoc">Função para fazer a ordenação ascendente dos dados da lista.</div><div class="ttdef"><b>Definição</b> DLL.c:161</div></div>
+<div class="ttc" id="aDLL_8h_html_ab9b97c2b109259628223b4b2dc3b81e4"><div class="ttname"><a href="DLL_8h.html#ab9b97c2b109259628223b4b2dc3b81e4">MyDLLRemove</a></div><div class="ttdeci">int MyDLLRemove(DLL *dll, uint16_t key)</div><div class="ttdoc">Remoção dos dados de um elemento da linked list.</div><div class="ttdef"><b>Definição</b> DLL.c:60</div></div>
+<div class="ttc" id="aDLL_8h_html_ade051f9229a2422b1b2e87592a3d7560"><div class="ttname"><a href="DLL_8h.html#ade051f9229a2422b1b2e87592a3d7560">MyDLLFindPrevious</a></div><div class="ttdeci">int MyDLLFindPrevious(DLL *dll, uint16_t key)</div><div class="ttdoc">Função para verificar os dados relativos de um elemento anterior.</div><div class="ttdef"><b>Definição</b> DLL.c:115</div></div>
+<div class="ttc" id="aDLL_8h_html_af933431f030f2428e9b8fe206e73957d"><div class="ttname"><a href="DLL_8h.html#af933431f030f2428e9b8fe206e73957d">MyDLLFind</a></div><div class="ttdeci">int MyDLLFind(DLL *dll, uint16_t key)</div><div class="ttdoc">Função para verificar os dados relativos a um elemento.</div><div class="ttdef"><b>Definição</b> DLL.c:85</div></div>
+<div class="ttc" id="aDLL_8h_html_afb10507f3f16e160a300fb15bb3f4e1b"><div class="ttname"><a href="DLL_8h.html#afb10507f3f16e160a300fb15bb3f4e1b">MyDLLFindNext</a></div><div class="ttdeci">int MyDLLFindNext(DLL *dll, uint16_t key)</div><div class="ttdoc">Função para verificar os dados relativos de um próximo elemento.</div><div class="ttdef"><b>Definição</b> DLL.c:98</div></div>
+<div class="ttc" id="astructDLLNode_html"><div class="ttname"><a href="structDLLNode.html">DLLNode</a></div><div class="ttdef"><b>Definição</b> DLL.h:20</div></div>
+<div class="ttc" id="astructDLL_html"><div class="ttname"><a href="structDLL.html">DLL</a></div><div class="ttdef"><b>Definição</b> DLL.h:28</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

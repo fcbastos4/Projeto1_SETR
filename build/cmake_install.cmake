@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 # Install script for directory: /home/francisco/Desktop/Projeto 1/Projeto1_SETR/src
-=======
-# Install script for directory: /home/francisco/Desktop/Projeto1_SETR/src
->>>>>>> francisco
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -48,11 +44,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-<<<<<<< HEAD
   include("/home/francisco/Desktop/Projeto 1/Projeto1_SETR/build/lib/cmake_install.cmake")
-=======
-  include("/home/francisco/Desktop/Projeto1_SETR/build/lib/cmake_install.cmake")
->>>>>>> francisco
 
 endif()
 
@@ -64,9 +56,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-<<<<<<< HEAD
 file(WRITE "/home/francisco/Desktop/Projeto 1/Projeto1_SETR/build/${CMAKE_INSTALL_MANIFEST}"
-=======
-file(WRITE "/home/francisco/Desktop/Projeto1_SETR/build/${CMAKE_INSTALL_MANIFEST}"
->>>>>>> francisco
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

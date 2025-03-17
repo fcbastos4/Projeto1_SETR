@@ -4,11 +4,7 @@
 # compile C with /usr/bin/cc
 C_DEFINES = 
 
-<<<<<<< HEAD
 C_INCLUDES = -I"/home/francisco/Desktop/Projeto 1/Projeto1_SETR/src/lib"
-=======
-C_INCLUDES = -I/home/francisco/Desktop/Projeto1_SETR/src/lib
->>>>>>> francisco
 
 C_FLAGS = 
 

@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 # Install script for directory: /home/francisco/Desktop/Projeto 1/Projeto1_SETR/src/lib
-=======
-# Install script for directory: /home/francisco/Desktop/Projeto1_SETR/src/lib
->>>>>>> francisco
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
