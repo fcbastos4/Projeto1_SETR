@@ -1,5 +1,5 @@
 \mainpage  Documentação de Projeto 1, SETR 
-# Projeto 1 - DLL
+## Introdução
 
 * Neste primeiro projeto é pretendido desenvolver um módulo de uma dupla lista ligada. Na documentação podemos encontrar um explicação geral do desenvolvimento do projeto
  
