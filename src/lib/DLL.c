@@ -97,6 +97,8 @@ int MyDLLFind(DLL *dll, uint16_t key) {
 
 int MyDLLFindNext(DLL *dll, uint16_t key) {
     DLLNode *current = dll->head;
+
+    // Ciclo para verificar se existe um elemento posterior ao pretendido
     while (current) {
         if (current->key == key) {
             if (current->next) {
@@ -114,6 +116,8 @@ int MyDLLFindNext(DLL *dll, uint16_t key) {
 
 int MyDLLFindPrevious(DLL *dll, uint16_t key) {
     DLLNode *current = dll->head;
+
+    // Ciclo para verificar se existe um elemento anterior ao pretendido
     while (current) {
         if (current->key == key) {
             if (current->prev) {
@@ -132,6 +136,8 @@ int MyDLLFindPrevious(DLL *dll, uint16_t key) {
 void MyDLLClear(DLL *dll) {
 
     DLLNode *current = dll->head;
+
+    //Ciclo para percorrer a dll e remover todos os elementos. Todos os nós levam reset
     while (current) {
         DLLNode *next = current->next;
         current->key = 0;
@@ -139,6 +145,8 @@ void MyDLLClear(DLL *dll) {
         current->next = NULL;
         current = next;
     }
+
+    // Os ponteiros  sáo ajustados e o contador leva reset 
     dll->head = NULL;
     dll->tail = NULL;
     dll->count = 0;
@@ -146,9 +154,9 @@ void MyDLLClear(DLL *dll) {
 
 uint8_t* MyDLLShowElements(DLL *dll) 
 {
+    // N=1 para nos prints começar do 1 e não do 0
     int n = 1;
-
-        
+        // Impressáo no terminal do nó e da sua respetiva key e os seus dados 
         DLLNode * current = dll->head;
         printf("Lista: \n");
         while(current != NULL) {
@@ -160,18 +168,19 @@ uint8_t* MyDLLShowElements(DLL *dll)
 
 void MyDLLSortAscending(DLL *dll) {
 
+    // Variáveis
     int swapped;
     DLLNode *current;
-    DLLNode *last = NULL;
+    DLLNode *last = NULL;       
 
-    // Bubble sort on the linked list
+    // Bubble sort na dll
     do {
         swapped = 0;
         current = dll->head;
 
         while (current->next != last) {
             if (current->key > current->next->key) {
-                // Swap data between nodes
+                // Troca de dados entre os nós
                 uint16_t tempKey = current->key;
                 uint8_t tempData[ELEMENT_SIZE];
                 memcpy(tempData, current->data, ELEMENT_SIZE);
