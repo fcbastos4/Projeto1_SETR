@@ -28,6 +28,17 @@ void MyDLLInit(DLL *dll) {
 }
 
 int MyDLLInsert(DLL *dll, uint16_t key, uint8_t data[]) {
+    DLLNode *current = dll->head;
+    // Verificar se a key que vai ser inserida já existe!
+    while(current != NULL){
+        if(current->key == key){
+            printf("Key já existente!\n");
+            return -1;
+        }
+        current = (DLLNode*)current->next;
+    }
+
+
     // Colocar os dados no elemento/nó
     for (int i = 0; i < MAX_ELEMENTS; i++) {
         // Os dados são inseridos no primeiro nó vago
