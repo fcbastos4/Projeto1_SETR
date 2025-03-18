@@ -34,6 +34,10 @@ int main() {
 
         switch (choice) {
             case 1:
+                if (myDLL.count >= MAX_ELEMENTS) {
+                    printf("A lista está cheia! Não é possível inserir mais elementos.\n");
+                    break;
+                }
                 printf("Digite a chave: ");
                 scanf("%hu", &key);
                 printf("Digite os dados: ");

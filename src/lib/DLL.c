@@ -28,12 +28,6 @@ void MyDLLInit(DLL *dll) {
 }
 
 int MyDLLInsert(DLL *dll, uint16_t key, uint8_t data[]) {
-    // Verificar se a lista já está cheia
-    if (dll->count >= MAX_ELEMENTS)
-    {
-        printf("Erro: A lista já está cheia!\n");
-        return -1;
-    }
     // Colocar os dados no elemento/nó
     for (int i = 0; i < MAX_ELEMENTS; i++) {
         // Os dados são inseridos no primeiro nó vago
