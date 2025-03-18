@@ -17,35 +17,40 @@
 
 
 void MyDLLInit(DLL *dll) {
-    dll->head = NULL;
-    dll->tail = NULL;
-    dll->count = 0;
+    dll->head = NULL;  // Sem elemento inicial
+    dll->tail = NULL;  // Sem elemento final
+    dll->count = 0;    
     for (int i = 0; i < MAX_ELEMENTS; i++) {
-        dll->nodes[i].key = 0;
-        dll->nodes[i].prev = NULL;
-        dll->nodes[i].next = NULL;
+        dll->nodes[i].key = 0;      // Inicialização das key's a 0
+        dll->nodes[i].prev = NULL;  // Sem elemento anterior
+        dll->nodes[i].next = NULL;  // Sem elemento a seguir
     }
 }
 
 int MyDLLInsert(DLL *dll, uint16_t key, uint8_t data[]) {
+    // Verificar se a lista já está cheia
     if (dll->count >= MAX_ELEMENTS)
     {
         printf("Erro: A lista já está cheia!\n");
         return -1;
     }
+    // Colocar os dados no elemento/nó
     for (int i = 0; i < MAX_ELEMENTS; i++) {
+        // Os dados são inseridos no primeiro nó vago
         if (dll->nodes[i].key == 0) {
             dll->nodes[i].key = key;
             memcpy(dll->nodes[i].data, data, ELEMENT_SIZE); 
             dll->nodes[i].data[ELEMENT_SIZE - 1] = '\0';
             dll->nodes[i].prev = dll->tail;
             dll->nodes[i].next = NULL;
-
+            
+            //Atualização do elemento final usado 
             if (dll->tail) {
                 dll->tail->next = &dll->nodes[i];
             }
             dll->tail = &dll->nodes[i];
 
+            //Atualização do elemento inicial 
             if (!dll->head) {
                 dll->head = &dll->nodes[i];
             }
@@ -59,6 +64,7 @@ int MyDLLInsert(DLL *dll, uint16_t key, uint8_t data[]) {
 
 int MyDLLRemove(DLL *dll, uint16_t key) {
     DLLNode *current = dll->head;
+    //Precorrer a lista toda à procura do elemento com a key a remover 
     while (current) {
         if (current->key == key) {
             if (current->prev) {
@@ -84,6 +90,7 @@ int MyDLLRemove(DLL *dll, uint16_t key) {
 
 int MyDLLFind(DLL *dll, uint16_t key) {
     DLLNode *current = dll->head;
+    //Precorrer a lista toda à procura do elemento
     while (current) {
         if (current->key == key) {
             printf("Elemento encontrado! Key: %hu, Data: %s\n", key, current->data);
